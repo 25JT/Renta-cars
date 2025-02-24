@@ -48,7 +48,7 @@ body {
 }
 
 .bttn:hover {
-    color: rgb(21, 161, 2);
+    color: #ffffff;
     transform: translateY(-3px) scale(1.05);
 }
 
@@ -161,7 +161,8 @@ body {
 
 /*Auts tarjetas*/
 .card-custom {
-    border: 1px solid #ddd;
+    border: 2px solid #000000;
+    box-shadow: 0px 6px 6px;
     border-radius: 10px;
     overflow: hidden;
     text-align: center;
@@ -186,15 +187,90 @@ body {
     font-weight: bold;
     text-transform: uppercase;
     margin-bottom: 10px;
+    font-size: x-large;
 }
 
+/*Boton mas informacion */
 .boton_rentar {
     background-color: white;
     border: 2px solid black;
+    border-radius: 10px;
     padding: 8px 20px;
     font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0px 2px 2px;    
 }
+/* From Uiverse.io by mrhyddenn */ 
+button {
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 220px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+  }
+  
+  .spann{
+    display: inline-block;
+    transform: skew(21deg);
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+  
+  button:hover {
+    color: #fff;
+  }
+  
+  button:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
 
+
+        /* Estilos para el modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: rgb(255, 255, 255);
+            margin: 15% auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 80%;
+            text-align: center;
+        }
+        .close {
+            color: rgb(255, 0, 0);
+            float: right;
+            font-size: 24px;
+            font-weight: bold;
+            cursor: pointer;
+            
+        }
 
 
 /*animaciones*/

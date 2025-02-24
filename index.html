@@ -101,14 +101,14 @@
                     <div class="card-custom">
                         <div class="title">Swift</div>
                         <img src="Img/carro1.png" alt="Swift">
-                        <button class="boton_rentar">Rentar</button>
+                        <button class="boton_rentar"onclick="Masinformacion('suzuki Sift Dzire tam','Automatico','sedan','1.200cm','Direccion Electoasistida','combustible a gasolina','Aire acondicionado','vidrios electricos','5 pasajeros','cuatro puertas')"> <span class="spann">mas informacion</span></button>
                     </div>
                 </div>
                 <div class="col-12 col-lg-5">
                     <div class="card-custom">
                         <div class="title">Kia K3 Cross</div>
                         <img src="Img/carro2.png" alt="Kia K3 Cross">
-                        <button class="boton_rentar">Rentar</button>
+                        <button class="boton_rentar"><span class="spann">mas informacion</span></button>
                     </div>
                 </div>
             </div>
@@ -118,14 +118,14 @@
                     <div class="card-custom">
                         <div class="title">Logan</div>
                         <img src="Img/carro2.png" alt="Logan">
-                        <button class="boton_rentar">Rentar</button>
+                        <button class="boton_rentar" onclick="Masinformacion('')"><span class="spann">mas informacion</span></button>
                     </div>
                 </div>
                 <div class="col-12 col-lg-5">
                     <div class="card-custom">
                         <div class="title">Kia K3 Cross</div>
                         <img src="Img/carro1.png" alt="Kia K3 Cross">
-                        <button class="boton_rentar">Rentar</button>
+                        <button class="boton_rentar"><span class="spann">mas informacion</span></button>
                     </div>
                 </div>
             </div>
@@ -135,14 +135,25 @@
                     <div class="card-custom">
                         <div class="title">Auto Extra</div>
                         <img src="Img/carro2.png" alt="Auto Extra">
-                        <button class="boton_rentar">Rentar</button>
+                        <button class="boton_rentar"><span class="spann">mas informacion</span></button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 <br>
-
+<!-- 🔥 MODAL -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        <h4 id="modal-title"></h4>
+        <p><strong>Marca:</strong> <span id="modal-marca"></span></p>
+        <p><strong>Modelo:</strong> <span id="modal-modelo"></span></p>
+        <p><strong>Motor:</strong> <span id="modal-motor"></span></p>
+        <p><strong>Transmisión:</strong> <span id="modal-transmision"></span></p>
+        <button class="btn btn-primary mt-3">Reservar</button>
+    </div>
+</div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
