@@ -11,14 +11,22 @@ document.getElementById('Presentacion').innerHTML = 'En TRACKER RENTA CAR somos 
 document.getElementById('alquiler-ti').innerHTML = 'alquiler de autos en el aeropuerto Alfonso Bonilla Aragón';
 document.getElementById('Cautos').innerHTML = 'NUESTROS AUTOS'
 
-function Masinformacion(nombre, marca, modelo, motor, transmision) {
+function Masinformacion(nombre, marca, modelo, motor, transmision, direccion,combustible,comodidades,capacidad,puertas ) {
   
-  document.getElementById("modal-title").innerText =  nombre;
+  document.getElementById("modal-title").innerText = nombre;
   document.getElementById("modal-marca").innerText = marca;
   document.getElementById("modal-modelo").innerText = modelo;
   document.getElementById("modal-motor").innerText = motor;
   document.getElementById("modal-transmision").innerText = transmision;
-  document.getElementById("modal").style.display = "block";
+  document.getElementById("modal-direccion").innerText = direccion;
+  document.getElementById("modal-combustible").innerText = combustible;
+  document.getElementById("modal-comodidades").innerText = comodidades;
+  document.getElementById("modal-capacidad").innerText = capacidad;
+  document.getElementById("modal-puertas").innerText = puertas;
+  let modal = document.getElementById("modal");
+  modal.style.display = "block";
+  modal.querySelector(".modal-content").style.animation = "fadeIn 0.5s ease-out";
+  
 } 
 function cerrarModal() {
   document.getElementById("modal").style.display = "none";
@@ -33,5 +41,6 @@ function cerrarModal() {
 
 
 AOS.init();
+
 
 

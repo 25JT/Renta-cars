@@ -98,44 +98,44 @@
         <div class="container text-center">
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-5">
-                    <div class="card-custom">
-                        <div class="title">Swift</div>
+                    <div class="card-custom" data-aos="flip-left">
+                        <div class="title">suzuki Sift</div>
                         <img src="Img/carro1.png" alt="Swift">
-                        <button class="boton_rentar"onclick="Masinformacion('suzuki Sift Dzire tam','Automatico','sedan','1.200cm','Direccion Electoasistida','combustible a gasolina','Aire acondicionado','vidrios electricos','5 pasajeros','cuatro puertas')"> <span class="spann">mas informacion</span></button>
+                        <button  class="boton_rentar"onclick="Masinformacion('suzuki Sift Dzire tam','suzuki','sedan','1.200cm','Automatico','Electroasistida','Gasolina','Aire acondicionado y vidrios electricos','5 pasajeros','cuatro')"> <span class="spann">mas informacion</span></button>
                     </div>
                 </div>
                 <div class="col-12 col-lg-5">
-                    <div class="card-custom">
-                        <div class="title">Kia K3 Cross</div>
-                        <img src="Img/carro2.png" alt="Kia K3 Cross">
-                        <button class="boton_rentar"><span class="spann">mas informacion</span></button>
+                    <div class="card-custom" data-aos="flip-right">
+                        <div class="title">Chevrolet Joy</div>
+                        <img src="Img/carro2.png" alt="Chevrolet Joy">
+                        <button class="boton_rentar" onclick="Masinformacion('Chevrolet Joy', 'Chevrolet', 'Sedán', '1.389 cm³', 'Mecánico', 'Hidráulica', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span class="spann">mas informacion</span></button>
                     </div>
                 </div>
             </div>
             <br>
             <div class="row justify-content-center">
                 <div class="col-12 col-lg-5">
-                    <div class="card-custom">
-                        <div class="title">Logan</div>
-                        <img src="Img/carro2.png" alt="Logan">
-                        <button class="boton_rentar" onclick="Masinformacion('')"><span class="spann">mas informacion</span></button>
+                    <div class="card-custom" data-aos="flip-left">
+                        <div class="title">Kia Rio</div>
+                        <img src="Img/carro2.png" alt="Kia Rio">
+                        <button class="boton_rentar" onclick="Masinformacion('Kia Rio', 'Kia', 'Sedán', '1.248 cm³', 'Mecánico', 'Electroasistida', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span class="spann">mas informacion</span></button>
                     </div>
                 </div>
                 <div class="col-12 col-lg-5">
-                    <div class="card-custom">
-                        <div class="title">Kia K3 Cross</div>
-                        <img src="Img/carro1.png" alt="Kia K3 Cross">
-                        <button class="boton_rentar"><span class="spann">mas informacion</span></button>
+                    <div class="card-custom" data-aos="flip-right">
+                        <div class="title">Nissan Versa</div>
+                        <img src="Img/carro1.png" alt="Nissan Versa">
+                        <button class="boton_rentar" onclick="Masinformacion('Nissan Versa', 'Nissan', 'Sedán', '1.586 cm³', 'Automático', 'Hidráulica', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span class="spann">mas informacion</span></button>
                     </div>
                 </div>
             </div>
             <br>
             <div class="row justify-content-center">
                 <div class="col-12  col-lg-5">
-                    <div class="card-custom">
-                        <div class="title">Auto Extra</div>
-                        <img src="Img/carro2.png" alt="Auto Extra">
-                        <button class="boton_rentar"><span class="spann">mas informacion</span></button>
+                    <div class="card-custom" data-aos="fade-up">
+                        <div class="title">Suzuki Vitara</div>
+                        <img src="Img/carro2.png" alt="Suzuki Vitara">
+                        <button class="boton_rentar" onclick="Masinformacion('Suzuki Vitara', 'Suzuki', 'SUV', '1.586 cm³', 'Automático', 'Hidráulica', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span class="spann">mas informacion</span></button>
                     </div>
                 </div>
             </div>
@@ -143,15 +143,21 @@
     </section>
 <br>
 <!-- 🔥 MODAL -->
-<div id="modal" class="modal">
+<div id="modal" class="modal" >
     <div class="modal-content">
         <span class="close" onclick="cerrarModal()">&times;</span>
-        <h4 id="modal-title"></h4>
+        <h4 id="modal-title" style="text-transform: uppercase;"></h4>
         <p><strong>Marca:</strong> <span id="modal-marca"></span></p>
         <p><strong>Modelo:</strong> <span id="modal-modelo"></span></p>
         <p><strong>Motor:</strong> <span id="modal-motor"></span></p>
         <p><strong>Transmisión:</strong> <span id="modal-transmision"></span></p>
-        <button class="btn btn-primary mt-3">Reservar</button>
+        <p><strong>Direccion:</strong> <span id="modal-direccion"></span></p>
+        <p><strong>Tipo de Combustible:</strong> <span id="modal-combustible"></span></p>
+        <p><strong>Comodidades:</strong> <span id="modal-comodidades"></span></p>
+        <p><strong>Capacidad:</strong> <span id="modal-capacidad"></span></p>
+        <p><strong>Puertas:</strong> <span id="modal-puertas"></span></p>
+
+        <button class=" boton_rentar btn-primary mt-3">Reservar</button>
     </div>
 </div>
 
