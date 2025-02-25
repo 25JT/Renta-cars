@@ -101,14 +101,18 @@
                     <div class="card-custom" data-aos="flip-left">
                         <div class="title">suzuki Sift</div>
                         <img src="Img/carro1.png" alt="Swift">
-                        <button  class="boton_rentar"onclick="Masinformacion('suzuki Sift Dzire tam','suzuki','sedan','1.200cm','Automatico','Electroasistida','Gasolina','Aire acondicionado y vidrios electricos','5 pasajeros','cuatro')"> <span class="spann">mas informacion</span></button>
+                        <button class="boton_rentar"
+                            onclick="Masinformacion('suzuki Sift Dzire tam','suzuki','sedan','1.200cm','Automatico','Electroasistida','Gasolina','Aire acondicionado y vidrios electricos','5 pasajeros','cuatro')">
+                            <span class="spann">mas informacion</span></button>
                     </div>
                 </div>
                 <div class="col-12 col-lg-5">
                     <div class="card-custom" data-aos="flip-right">
                         <div class="title">Chevrolet Joy</div>
                         <img src="Img/carro2.png" alt="Chevrolet Joy">
-                        <button class="boton_rentar" onclick="Masinformacion('Chevrolet Joy', 'Chevrolet', 'Sedán', '1.389 cm³', 'Mecánico', 'Hidráulica', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span class="spann">mas informacion</span></button>
+                        <button class="boton_rentar"
+                            onclick="Masinformacion('Chevrolet Joy', 'Chevrolet', 'Sedán', '1.389 cm³', 'Mecánico', 'Hidráulica', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span
+                                class="spann">mas informacion</span></button>
                     </div>
                 </div>
             </div>
@@ -118,14 +122,18 @@
                     <div class="card-custom" data-aos="flip-left">
                         <div class="title">Kia Rio</div>
                         <img src="Img/carro2.png" alt="Kia Rio">
-                        <button class="boton_rentar" onclick="Masinformacion('Kia Rio', 'Kia', 'Sedán', '1.248 cm³', 'Mecánico', 'Electroasistida', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span class="spann">mas informacion</span></button>
+                        <button class="boton_rentar"
+                            onclick="Masinformacion('Kia Rio', 'Kia', 'Sedán', '1.248 cm³', 'Mecánico', 'Electroasistida', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span
+                                class="spann">mas informacion</span></button>
                     </div>
                 </div>
                 <div class="col-12 col-lg-5">
                     <div class="card-custom" data-aos="flip-right">
                         <div class="title">Nissan Versa</div>
                         <img src="Img/carro1.png" alt="Nissan Versa">
-                        <button class="boton_rentar" onclick="Masinformacion('Nissan Versa', 'Nissan', 'Sedán', '1.586 cm³', 'Automático', 'Hidráulica', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span class="spann">mas informacion</span></button>
+                        <button class="boton_rentar"
+                            onclick="Masinformacion('Nissan Versa', 'Nissan', 'Sedán', '1.586 cm³', 'Automático', 'Hidráulica', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span
+                                class="spann">mas informacion</span></button>
                     </div>
                 </div>
             </div>
@@ -135,31 +143,113 @@
                     <div class="card-custom" data-aos="fade-up">
                         <div class="title">Suzuki Vitara</div>
                         <img src="Img/carro2.png" alt="Suzuki Vitara">
-                        <button class="boton_rentar" onclick="Masinformacion('Suzuki Vitara', 'Suzuki', 'SUV', '1.586 cm³', 'Automático', 'Hidráulica', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span class="spann">mas informacion</span></button>
+                        <button class="boton_rentar"
+                            onclick="Masinformacion('Suzuki Vitara', 'Suzuki', 'SUV', '1.586 cm³', 'Automático', 'Hidráulica', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span
+                                class="spann">mas informacion</span></button>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-<br>
-<!-- 🔥 MODAL -->
-<div id="modal" class="modal" >
-    <div class="modal-content">
-        <span class="close" onclick="cerrarModal()">&times;</span>
-        <h4 id="modal-title" style="text-transform: uppercase;"></h4>
-        <p><strong>Marca:</strong> <span id="modal-marca"></span></p>
-        <p><strong>Modelo:</strong> <span id="modal-modelo"></span></p>
-        <p><strong>Motor:</strong> <span id="modal-motor"></span></p>
-        <p><strong>Transmisión:</strong> <span id="modal-transmision"></span></p>
-        <p><strong>Direccion:</strong> <span id="modal-direccion"></span></p>
-        <p><strong>Tipo de Combustible:</strong> <span id="modal-combustible"></span></p>
-        <p><strong>Comodidades:</strong> <span id="modal-comodidades"></span></p>
-        <p><strong>Capacidad:</strong> <span id="modal-capacidad"></span></p>
-        <p><strong>Puertas:</strong> <span id="modal-puertas"></span></p>
+    <br>
+    <!-- 🔥 MODAL -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="cerrarModal()">&times;</span>
+            <h4 id="modal-title" style="text-transform: uppercase;"></h4>
+            <p><strong>Marca:</strong> <span id="modal-marca"></span></p>
+            <p><strong>Modelo:</strong> <span id="modal-modelo"></span></p>
+            <p><strong>Motor:</strong> <span id="modal-motor"></span></p>
+            <p><strong>Transmisión:</strong> <span id="modal-transmision"></span></p>
+            <p><strong>Direccion:</strong> <span id="modal-direccion"></span></p>
+            <p><strong>Tipo de Combustible:</strong> <span id="modal-combustible"></span></p>
+            <p><strong>Comodidades:</strong> <span id="modal-comodidades"></span></p>
+            <p><strong>Capacidad:</strong> <span id="modal-capacidad"></span></p>
+            <p><strong>Puertas:</strong> <span id="modal-puertas"></span></p>
 
-        <button class=" boton_rentar btn-primary mt-3">Reservar</button>
+            <button class=" boton_rentar btn-primary mt-3">Reservar</button>
+        </div>
     </div>
-</div>
+
+    <!-- Requisitos para alquilar -->
+    <section class="contenedor-titulos" data-aos="fade-up">
+        <div class="txt-titulo">
+            <h1 id="Ralquilar" class="titulos-txt"
+                style="font-weight: bold; font-style: italic;color: black; text-transform: uppercase; text-align: center;">
+                RaLQUILAR</h1>
+
+        </div>
+    </section>
+    <h5 data-aos="fade-dow"
+        style="border-radius: 30px;  text-transform: uppercase; margin: 0px 15px 0px 15px; text-align: center; background-color: rgb(255, 255, 255); color: black; padding: 10px; border-radius: 5px ; border: black 2px solid; font-style: italic; font-weight: bold;">
+        Con o sin reserva te brindamos el alquiler del vehículo </h5>
+    <br>
+    <section class="contenedor-txt" style="margin-bottom: 8%;">
+
+        <div class="container text-center">
+            <div class="row">
+
+
+                <!-- Persona Natural -->
+                <div class="col col-12 col-lg-5" data-aos="fade-up" data-aos-offset="300"
+                    data-aos-easing="ease-in-sine">
+                    <h3
+                        style="background-color: black; color: white; padding: 10px; border-radius: 5px; font-style: italic; font-weight: bold;">
+                        PERSONA NATURAL</h3>
+                    <br>
+                    <div class="caja"
+                        style="border: 2px solid black; padding: 20px; border-radius: 10px; box-shadow: 3px 3px 5px grey;">
+                        <ul style="list-style: none; padding: 0; text-align: left; text-align: center;">
+                            <li>Tener mínimo 22 años de edad</li>
+                            <li>Cédula de ciudadanía colombiana o pasaporte original si no cuenta con ella </li>
+                            <li><strong>Licencia de conducción vigente original nacional o extranjera</strong></li>
+                            <li>Depósito reembolsable en efectivo o Tarjeta de crédito, con cupo disponible para
+                                alquiler</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Persona EMPRESAS -->
+                <div class="col col-12 col-lg-5" data-aos="fade-up" data-aos-offset="300"
+                    data-aos-easing="ease-in-sine">
+                    <h3
+                        style="background-color: rgb(255, 255, 255); color: black; padding: 10px; border-radius: 5px ; border: black 2px solid; font-style: italic; font-weight: bold;">
+                        EMPRESAS</h3>
+                    <br>
+                    <div class="caja"
+                        style="border: 2px solid black; padding: 20px; border-radius: 10px; box-shadow: 3px 3px 5px grey;">
+                        <ul style="list-style: none; padding: 0; text-align: left; text-align: center;">
+                            <li>Cámara de Comercio o Fotocopia del RUT no mayor a 30 días</li>
+                            <li>Tener mínimo 22 años de edad</li>
+                            <li>Cédula de ciudadanía colombiana o pasaporte original si no cuenta con ella </li>
+                            <li><strong>Licencia de conducción vigente original nacional o extranjera</strong></li>
+                            <li>Depósito reembolsable en efectivo o Tarjeta de crédito, con cupo disponible para
+                                alquiler</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Forma de pago -->
+    <section class="contenedor-titulos" data-aos="fade-up">
+        <div class="txt-titulo">
+            <h1 id="Fpago" class="titulos-txt"
+                style="font-weight: bold; font-style: italic;color: black; text-transform: uppercase; text-align: center;">
+                RaLQUILAR</h1>
+
+        </div>
+    </section>
+    <br>
+    <section>
+        <div class="container text-center" style="justify-content: center; display: flex; align-items: center; width: auto; height:100px ; font-weight: bold; font-style: italic; border: #000000 3px solid; text-transform: uppercase; border-radius: 10px;">
+            <h5>
+                Pago en efectivo en pesos colombianos , dólares o euros. 
+                Aceptamos tarjetas débito y crédito. 
+            </h5>
+        </div>
+    </section>
+
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
