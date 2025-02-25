@@ -243,14 +243,80 @@
     <br>
     <section>
         <div class="container text-center" style="justify-content: center; display: flex; align-items: center; width: auto; height:100px ; font-weight: bold; font-style: italic; border: #000000 3px solid; text-transform: uppercase; border-radius: 10px;">
-            <h5>
-                Pago en efectivo en pesos colombianos , dólares o euros. 
+            <h6>
+                Pago en efectivo en pesos colombianos, dólares o euros. 
                 Aceptamos tarjetas débito y crédito. 
-            </h5>
+            </h6>
         </div>
     </section>
+<br>
+      <!--Envianos un Msj-->
 
-
+      <section class="contenedor-titulos" data-aos="fade-up">
+        <div class="txt-titulo">
+            <h1  class="titulos-txt"
+                style="font-weight: bold; font-style: italic;color: black; text-transform: uppercase; text-align: center;">
+                ENVIANOS UN MESAJE</h1>
+        </div>
+    </section>
+      <div class="container mt-5" style="max-width: 90%; padding: 10px;" data-aos="fade-up">
+        <form id="rentalForm">
+            <div class="mb-3">
+                <label for="name" class="form-label" style="font-weight: bold; font-style:italic">Nombre</label>
+                <input type="text" class="form-control" style="border: #000000 solid 1px;" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="car" class="form-label" style="font-weight: bold; font-style:italic">Selecciona un auto</label>
+                <select class="form-select" style="border: #000000 solid 1px;" id="car" required>
+                    <option value="Suzuki Swift">Suzuki Swift Dzire tam</option>
+                    <option value="Chevrolet Joy">Chevrolet Joy</option>
+                    <option value="Kia Rio">Kia Rio</option>
+                    <option value="Nissan Versa">Nissan Versa</option>
+                    <option value="Suzuki Vitara">Suzuki Vitara</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label" style="font-weight: bold; font-style:italic" >Mensaje</label>
+                <textarea class="form-control" id="message" style="border: #000000 solid 1px;" rows="3" required></textarea>
+            </div>
+            <button type="button" class="btn boton_rentar btn-success" onclick="sendWhatsApp()">Enviar a WhatsApp</button>
+        </form>
+    </div>
+    <br>
+<!--PREGUNTAS -->
+    <section class="contenedor-titulos" data-aos="fade-up">
+        <div class="txt-titulo">
+            <h1  class="titulos-txt"
+                style="font-weight: bold; font-style: italic;color: black; text-transform: uppercase; text-align: center;">
+               Preguntas frecuentes </h1>
+        </div>
+    </section>
+    <div class="container mt-3">
+        <div class="faq-container">
+            <div class="faq-section">
+                <p class="faq-question">¿Se puede utilizar licencia de conducción del extranjero?</p>
+                <p class="faq-answer">Para conducir en el país, se requiere una licencia válida y vigente. Si el cliente es extranjero, deberá presentar su licencia de conducción internacional junto con su pasaporte original o cédula de extranjería al momento de recoger el vehículo.</p>
+            </div>
+            <hr>
+            <div class="faq-section">
+                <p class="faq-question">¿Cómo se pueden hacer los pagos?</p>
+                <p class="faq-answer">En TRACKER RENTA CAR se permite recibir tarjetas de crédito de entidades financieras que tengan franquicias como Visa o MasterCard, efectivo o transferencia bancaria.</p>
+            </div>
+            <hr>
+            <div class="faq-section">
+                <p class="faq-question">Exclusiones de la protección</p>
+                <p class="faq-answer">No se cubren pérdidas o daños a documentos del vehículo, llaves, multas, placas, accesorios removibles (como radios, espejos, copas, farolas), llantas, ruedas de emergencia, aros, componentes del motor, ni robo de piezas. Es importante tener en cuenta que ninguna protección o seguro cubre accesorios removibles.</p>
+            </div>
+            <hr>
+            <div class="faq-section">
+                <p class="faq-question">Depósito reembolsable o garantía</p>
+                <p class="faq-answer">Después de la devolución del carro se libera entre 6 a 10 días hábiles. Si es por congelamiento de tarjeta o en efectivo, se realiza por medio de transferencia bancaria.</p>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+      
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

@@ -13,8 +13,8 @@ document.getElementById('Cautos').innerHTML = 'NUESTROS AUTOS'
 document.getElementById('Ralquilar').innerHTML = 'Requisitos para alquilar un vehículo en el aeropuerto Alfonso Bonilla Aragón '
 document.getElementById('Fpago').innerHTML = 'Formas de pago'
 
-function Masinformacion(nombre, marca, modelo, motor, transmision, direccion,combustible,comodidades,capacidad,puertas ) {
-  
+function Masinformacion(nombre, marca, modelo, motor, transmision, direccion, combustible, comodidades, capacidad, puertas) {
+
   document.getElementById("modal-title").innerText = nombre;
   document.getElementById("modal-marca").innerText = marca;
   document.getElementById("modal-modelo").innerText = modelo;
@@ -28,19 +28,40 @@ function Masinformacion(nombre, marca, modelo, motor, transmision, direccion,com
   let modal = document.getElementById("modal");
   modal.style.display = "block";
   modal.querySelector(".modal-content").style.animation = "fadeIn 0.5s ease-out";
-  
-} 
+
+}
 function cerrarModal() {
   document.getElementById("modal").style.display = "none";
 }
-    // Cierra el modal si se hace clic fuera del contenido
-    window.onclick = function(event) {
-      let modal = document.getElementById("modal");
-      if (event.target == modal) {
-          modal.style.display = "none";
-      }
+// Cierra el modal si se hace clic fuera del contenido
+window.onclick = function (event) {
+  let modal = document.getElementById("modal");
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// Enviar formulario
+function sendWhatsApp() {
+  let name = document.getElementById("name").value;
+  let car = document.getElementById("car").value;
+  let message = document.getElementById("message").value;
+  if (!name || !car || !message) {
+    Swal.fire({
+      title: "Oops!",
+      text: "Por favor, complete todos los campos.",
+      icon: "error",
+      confirmButtonColor: "#E26060",
+    });
+    return;
   }
 
+  let phoneNumber = "3014414701";
+
+  let url = `https://wa.me/${phoneNumber}?text=Hola, mi nombre es ${encodeURIComponent(name)}. Quisiera alquilar un ${encodeURIComponent(car)}. %0A${encodeURIComponent(message)}`;
+
+  window.open(url, "_blank");
+}
 
 AOS.init();
 
