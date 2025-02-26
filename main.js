@@ -1,3 +1,5 @@
+let numero = "3014414701";
+AOS.init();
 var typed = new Typed('#N_logo', {
   strings: ["TRACKER RENTA CAR", "Bienvenidos"],
   typeSpeed: 40,
@@ -6,12 +8,21 @@ var typed = new Typed('#N_logo', {
   showCursor: false
 });
 
-document.getElementById('horario').innerHTML = 'LUNES A VIERNES </br>8:00 AM - 5:00 PM';
-document.getElementById('Presentacion').innerHTML = 'En TRACKER RENTA CAR somos una empresa especializa en ofrecer servicios personalizados y de alta calidad en el sector de transporte y alquiler de vehículos con una amplia gama y variedad. </br> Es muy importante para nosotros Garantizar la satisfacción total de nuestros clientes, cubriendo integralmente sus necesidades, expectativas y requerimientos cuando alquila con nosotros un vehículo.'
-document.getElementById('alquiler-ti').innerHTML = 'alquiler de autos en el aeropuerto Alfonso Bonilla Aragón';
-document.getElementById('Cautos').innerHTML = 'NUESTROS AUTOS'
-document.getElementById('Ralquilar').innerHTML = 'Requisitos para alquilar un vehículo en el aeropuerto Alfonso Bonilla Aragón '
-document.getElementById('Fpago').innerHTML = 'Formas de pago'
+const contenido = {
+    horario: "LUNES A VIERNES </br>8:00 AM - 5:00 PM",
+    Presentacion: "En TRACKER RENTA CAR somos una empresa especializada en ofrecer servicios personalizados y de alta calidad en el sector de transporte y alquiler de vehículos con una amplia gama y variedad. </br> Es muy importante para nosotros garantizar la satisfacción total de nuestros clientes, cubriendo integralmente sus necesidades, expectativas y requerimientos cuando alquila con nosotros un vehículo.",
+    "alquiler-ti": "Alquiler de autos en el aeropuerto Alfonso Bonilla Aragón",
+    Cautos: "NUESTROS AUTOS",
+    Ralquilar: "Requisitos para alquilar un vehículo en el aeropuerto Alfonso Bonilla Aragón",
+    Fpago: "Formas de pago"
+};
+
+// Recorremos el objeto y asignamos los valores automáticamente
+Object.entries(contenido).forEach(([id, text]) => {
+    const elemento = document.getElementById(id);
+    if (elemento) elemento.innerHTML = text;
+});
+
 
 function Masinformacion(nombre, marca, modelo, motor, transmision, direccion, combustible, comodidades, capacidad, puertas) {
 
@@ -56,14 +67,60 @@ function sendWhatsApp() {
     return;
   }
 
-  let phoneNumber = "3014414701";
+  let phoneNumber = numero;
 
   let url = `https://wa.me/${phoneNumber}?text=Hola, mi nombre es ${encodeURIComponent(name)}. Quisiera alquilar un ${encodeURIComponent(car)}. %0A${encodeURIComponent(message)}`;
-
   window.open(url, "_blank");
+  limpiarCampos();
 }
 
-AOS.init();
+function mostrarModal() {
+  document.getElementById("fondo").classList.add("active");
+  document.getElementById("ventana").classList.add("active");
+}
+
+function cerrarMo() {
+  document.getElementById("fondo").classList.remove("active");
+  document.getElementById("ventana").classList.remove("active");
+  limpiarCampos();
+}
+
+function enviamsg() {
+  let name = document.getElementById("name1").value;
+  let car = document.getElementById("car1").value;
+  let message = document.getElementById("message1").value;
+  let phoneNumber = numero;
+  
+  
+  
+  if (name && car && message) {
+    if(car == "mensaje"){
+      let url = `https://wa.me/${phoneNumber}?text=Hola, mi nombre es ${encodeURIComponent(name)}. %0A${encodeURIComponent(message)}`;    
+      window.open(url, "_blank");
+      limpiarCampos();
+    }else{
+      let url = `https://wa.me/${phoneNumber}?text=Hola, mi nombre es ${encodeURIComponent(name)}. Quisiera alquilar un ${encodeURIComponent(car)}. %0A${encodeURIComponent(message)}`;
+    
+      window.open(url, "_blank");
+      limpiarCampos();
+    }
+  } else {
+    Swal.fire({
+      title: "Oops!",
+      text: "Por favor, complete todos los campos.",
+      icon: "error",
+      confirmButtonColor: "#E26060",
+    });
+  }
+}
+
+function limpiarCampos() {
+  document.getElementById("rentalForm1").reset();
+  document.getElementById("rentalForm").reset();
+  
+}
+
+
 
 
 

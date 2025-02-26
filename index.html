@@ -11,12 +11,17 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
+
+
 <body>
     <nav class="nav_p">
         <div class="contenedor" data-aos="zoom-in">
             <h1 id="N_logo" style="font-weight: bold; font-style: italic; text-shadow: 0px 1px 6px; height: 1em;"></h1>
             <div class="menu">
-                <button class="bttn" style="font-weight: bold; font-style: italic;">whatsapp</button>
+                <button class="bttn" style="font-weight: bold; font-style: italic;"  onclick="mostrarModal()">whatsapp</button>
+
+              
+
                 <div class="horario">
                     <h5 id="horario" style="font-weight: bold; font-style: italic;"> horario</h5>.
                 </div>
@@ -100,7 +105,7 @@
                 <div class="col-12 col-lg-5">
                     <div class="card-custom" data-aos="flip-left">
                         <div class="title">suzuki Sift</div>
-                        <img src="Img/carro1.png" alt="Swift">
+                        <img src="Img/suzuki Sift.png" alt="Swift">
                         <button class="boton_rentar"
                             onclick="Masinformacion('suzuki Sift Dzire tam','suzuki','sedan','1.200cm','Automatico','Electroasistida','Gasolina','Aire acondicionado y vidrios electricos','5 pasajeros','cuatro')">
                             <span class="spann">mas informacion</span></button>
@@ -109,7 +114,7 @@
                 <div class="col-12 col-lg-5">
                     <div class="card-custom" data-aos="flip-right">
                         <div class="title">Chevrolet Joy</div>
-                        <img src="Img/carro2.png" alt="Chevrolet Joy">
+                        <img src="Img/Chevrolet Joy.png" alt="Chevrolet Joy">
                         <button class="boton_rentar"
                             onclick="Masinformacion('Chevrolet Joy', 'Chevrolet', 'Sedán', '1.389 cm³', 'Mecánico', 'Hidráulica', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span
                                 class="spann">mas informacion</span></button>
@@ -121,7 +126,7 @@
                 <div class="col-12 col-lg-5">
                     <div class="card-custom" data-aos="flip-left">
                         <div class="title">Kia Rio</div>
-                        <img src="Img/carro2.png" alt="Kia Rio">
+                        <img src="Img/Kia Rio.png" alt="Kia Rio">
                         <button class="boton_rentar"
                             onclick="Masinformacion('Kia Rio', 'Kia', 'Sedán', '1.248 cm³', 'Mecánico', 'Electroasistida', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span
                                 class="spann">mas informacion</span></button>
@@ -130,7 +135,7 @@
                 <div class="col-12 col-lg-5">
                     <div class="card-custom" data-aos="flip-right">
                         <div class="title">Nissan Versa</div>
-                        <img src="Img/carro1.png" alt="Nissan Versa">
+                        <img src="Img/Nissan Versa.png" alt="Nissan Versa">
                         <button class="boton_rentar"
                             onclick="Masinformacion('Nissan Versa', 'Nissan', 'Sedán', '1.586 cm³', 'Automático', 'Hidráulica', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span
                                 class="spann">mas informacion</span></button>
@@ -142,7 +147,7 @@
                 <div class="col-12  col-lg-5">
                     <div class="card-custom" data-aos="fade-up">
                         <div class="title">Suzuki Vitara</div>
-                        <img src="Img/carro2.png" alt="Suzuki Vitara">
+                        <img src="Img/Suzuki Vitara.png" alt="Suzuki Vitara">
                         <button class="boton_rentar"
                             onclick="Masinformacion('Suzuki Vitara', 'Suzuki', 'SUV', '1.586 cm³', 'Automático', 'Hidráulica', 'Gasolina', 'Aire acondicionado, cierre centralizado, vidrios eléctricos', '5 pasajeros', 'Cuatro')"><span
                                 class="spann">mas informacion</span></button>
@@ -167,7 +172,7 @@
             <p><strong>Capacidad:</strong> <span id="modal-capacidad"></span></p>
             <p><strong>Puertas:</strong> <span id="modal-puertas"></span></p>
 
-            <button class=" boton_rentar btn-primary mt-3">Reservar</button>
+            <a href="#reserva" onclick="cerrarModal()"><button class=" boton_rentar btn-primary mt-3"> Reservar</button></a> 
         </div>
     </div>
 
@@ -242,31 +247,33 @@
     </section>
     <br>
     <section>
-        <div class="container text-center" style="justify-content: center; display: flex; align-items: center; width: auto; height:100px ; font-weight: bold; font-style: italic; border: #000000 3px solid; text-transform: uppercase; border-radius: 10px;">
+        <div class="container text-center"
+            style="justify-content: center; display: flex; align-items: center; width: auto; height:100px ; font-weight: bold; font-style: italic; border: #000000 3px solid; text-transform: uppercase; border-radius: 10px;">
             <h6>
-                Pago en efectivo en pesos colombianos, dólares o euros. 
-                Aceptamos tarjetas débito y crédito. 
+                Pago en efectivo en pesos colombianos, dólares o euros.
+                Aceptamos tarjetas débito y crédito.
             </h6>
         </div>
     </section>
-<br>
-      <!--Envianos un Msj-->
-
-      <section class="contenedor-titulos" data-aos="fade-up">
+    <br>
+    <!--Envianos un Msj formulario-->
+    <div  id="reserva"></div>
+    <section class="contenedor-titulos" data-aos="fade-up">
         <div class="txt-titulo">
-            <h1  class="titulos-txt"
+            <h1 class="titulos-txt"
                 style="font-weight: bold; font-style: italic;color: black; text-transform: uppercase; text-align: center;">
-                ENVIANOS UN MESAJE</h1>
+                RESERVA AHORA</h1>
         </div>
     </section>
-      <div class="container mt-5" style="max-width: 90%; padding: 10px;" data-aos="fade-up">
+    <div class="container mt-5" style="max-width: 90%; padding: 10px;" data-aos="fade-up">
         <form id="rentalForm">
             <div class="mb-3">
                 <label for="name" class="form-label" style="font-weight: bold; font-style:italic">Nombre</label>
                 <input type="text" class="form-control" style="border: #000000 solid 1px;" id="name" required>
             </div>
             <div class="mb-3">
-                <label for="car" class="form-label" style="font-weight: bold; font-style:italic">Selecciona un auto</label>
+                <label for="car" class="form-label" style="font-weight: bold; font-style:italic">Selecciona un
+                    auto</label>
                 <select class="form-select" style="border: #000000 solid 1px;" id="car" required>
                     <option value="Suzuki Swift">Suzuki Swift Dzire tam</option>
                     <option value="Chevrolet Joy">Chevrolet Joy</option>
@@ -276,46 +283,87 @@
                 </select>
             </div>
             <div class="mb-3">
-                <label for="message" class="form-label" style="font-weight: bold; font-style:italic" >Mensaje</label>
-                <textarea class="form-control" id="message" style="border: #000000 solid 1px;" rows="3" required></textarea>
+                <label for="message" class="form-label" style="font-weight: bold; font-style:italic">Mensaje</label>
+                <textarea class="form-control" id="message" style="border: #000000 solid 1px;" rows="3"
+                    required></textarea>
             </div>
-            <button type="button" class="btn boton_rentar btn-success" onclick="sendWhatsApp()">Enviar a WhatsApp</button>
+            <button type="button" class="btn boton_rentar btn-success" onclick="sendWhatsApp()">Enviar a
+                WhatsApp</button>
         </form>
     </div>
     <br>
-<!--PREGUNTAS -->
+    <!--PREGUNTAS -->
     <section class="contenedor-titulos" data-aos="fade-up">
         <div class="txt-titulo">
-            <h1  class="titulos-txt"
+            <h1 class="titulos-txt"
                 style="font-weight: bold; font-style: italic;color: black; text-transform: uppercase; text-align: center;">
-               Preguntas frecuentes </h1>
+                Preguntas frecuentes </h1>
         </div>
     </section>
     <div class="container mt-3">
         <div class="faq-container">
             <div class="faq-section">
                 <p class="faq-question">¿Se puede utilizar licencia de conducción del extranjero?</p>
-                <p class="faq-answer">Para conducir en el país, se requiere una licencia válida y vigente. Si el cliente es extranjero, deberá presentar su licencia de conducción internacional junto con su pasaporte original o cédula de extranjería al momento de recoger el vehículo.</p>
+                <p class="faq-answer">Para conducir en el país, se requiere una licencia válida y vigente. Si el cliente
+                    es extranjero, deberá presentar su licencia de conducción internacional junto con su pasaporte
+                    original o cédula de extranjería al momento de recoger el vehículo.</p>
             </div>
             <hr>
             <div class="faq-section">
                 <p class="faq-question">¿Cómo se pueden hacer los pagos?</p>
-                <p class="faq-answer">En TRACKER RENTA CAR se permite recibir tarjetas de crédito de entidades financieras que tengan franquicias como Visa o MasterCard, efectivo o transferencia bancaria.</p>
+                <p class="faq-answer">En TRACKER RENTA CAR se permite recibir tarjetas de crédito de entidades
+                    financieras que tengan franquicias como Visa o MasterCard, efectivo o transferencia bancaria.</p>
             </div>
             <hr>
             <div class="faq-section">
                 <p class="faq-question">Exclusiones de la protección</p>
-                <p class="faq-answer">No se cubren pérdidas o daños a documentos del vehículo, llaves, multas, placas, accesorios removibles (como radios, espejos, copas, farolas), llantas, ruedas de emergencia, aros, componentes del motor, ni robo de piezas. Es importante tener en cuenta que ninguna protección o seguro cubre accesorios removibles.</p>
+                <p class="faq-answer">No se cubren pérdidas o daños a documentos del vehículo, llaves, multas, placas,
+                    accesorios removibles (como radios, espejos, copas, farolas), llantas, ruedas de emergencia, aros,
+                    componentes del motor, ni robo de piezas. Es importante tener en cuenta que ninguna protección o
+                    seguro cubre accesorios removibles.</p>
             </div>
             <hr>
             <div class="faq-section">
                 <p class="faq-question">Depósito reembolsable o garantía</p>
-                <p class="faq-answer">Después de la devolución del carro se libera entre 6 a 10 días hábiles. Si es por congelamiento de tarjeta o en efectivo, se realiza por medio de transferencia bancaria.</p>
+                <p class="faq-answer">Después de la devolución del carro se libera entre 6 a 10 días hábiles. Si es por
+                    congelamiento de tarjeta o en efectivo, se realiza por medio de transferencia bancaria.</p>
             </div>
         </div>
         <div class="footer"></div>
     </div>
-      
+
+  <!-- Modal whatsapp-->
+  <div id="fondo" class="overlay" onclick="cerrarMo()">
+    <div id="ventana" class="modal-box" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="cerrarMo()">&times;</span>
+        <h4 class="Msj">ENVIANOS UN MENSAJE</h4>
+        <form id="rentalForm1">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="name1" required>
+            </div>
+            <div class="mb-3">
+                <label for="car" class="form-label">Selecciona un auto</label>
+                <select class="form-select" id="car1" required>
+                    <option value="mensaje">--</option>
+                    <option value="Suzuki Swift">Suzuki Swift Dzire tam</option>
+                    <option value="Chevrolet Joy">Chevrolet Joy</option>
+                    <option value="Kia Rio">Kia Rio</option>
+                    <option value="Nissan Versa">Nissan Versa</option>
+                    <option value="Suzuki Vitara">Suzuki Vitara</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea class="form-control" id="message1" rows="3" required></textarea>
+            </div>
+            <button type="button" class="btn btn-success" onclick="enviamsg()">Enviar a WhatsApp</button>
+        </form>
+    </div>
+</div>
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
