@@ -1,4 +1,4 @@
-let numero = "3014414701";
+let numero = "3217896998";
 AOS.init();
 var typed = new Typed('#N_logo', {
   strings: ["TRACKER RENTA CAR", "Bienvenidos"],
