@@ -28,6 +28,29 @@
   gtag('config', 'G-TQ2FTT52KX');
 </script>
 
+ <script>
+// deshabilitar  botón derecho
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+// deshabilitar F12 y Ctrl+Shift+I
+document.addEventListener('keydown', event => {
+  if (event.keyCode === 123 || 
+      (event.ctrlKey && event.shiftKey && event.keyCode === 73)) {
+    event.preventDefault();
+    alert("¡Acceso denegado!");
+  }
+});
+
+// Deshabilitar fetch y XMLHttpRequest
+window.fetch = function() {
+  console.warn("¡No puedes hacer esto aquí! 🚫");
+};
+
+XMLHttpRequest.prototype.open = function() {
+  console.warn("¡Acceso denegado! 🚫");
+};
+    </script>
+
 
 
 <body>
